@@ -1,12 +1,19 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Raleway', sans-serif; 
 }
 /* 
 font-family: 'Montserrat', sans-serif;
 font-family: 'PT Sans', sans-serif;
 font-family: 'Raleway', sans-serif; */
 
+hr{
+    width: 40px;
+    height: 4px; 
+    border: solid 1px transparent !important;
+    opacity: 100% !important;
+}
 
 /* Header */
 .header{
@@ -49,10 +56,70 @@ font-family: 'Raleway', sans-serif; */
 }
 .header::after{
     background-color: #33a9ee;
-    right: 0em;
     clip-path: polygon(0 45%, 100% 0, 100% 100%, 0% 100%);
 }
 
-.content{
-    margin: 2em;
+.content h1{
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+
+.content p{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+.path{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Message Board */
+.msgboard{
+    position: relative;
+    top: -10em;
+    height: 23em;
+    background: linear-gradient(
+        to right,
+        #33a9ee 0%,
+        #33a9ee 50%,
+        #fff 50%,
+        #fff 100%
+    );
+    z-index: -1;
+}
+
+.msgboard .row{
+    padding-top: 11em;
+}
+
+.msgboard h6{
+    font-weight: 700;    
+    letter-spacing: 2px;
+}
+
+.emergency h6, .new-reg h6{
+    color: #fff;
+}
+.emergency p, .new-reg p{
+    color: #fff;
+}
+
+.hours h6, .timetable h6{
+    color: #0f89d1;
+}
+
+.hours td, .timetable p{
+    color: #0f89d1;
+}
+.msgboard p, td{
+    padding-top: 10px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 14px;
+}
+
+.msgboard td{
+    padding: 10px 15px 0 0 ;
+    border-bottom: solid 1px #0f89d1;
+
 }
