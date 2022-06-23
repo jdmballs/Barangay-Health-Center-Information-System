@@ -14,12 +14,18 @@ hr{
     border: solid 1px transparent !important;
     opacity: 100% !important;
 }
-h6{
+h6, h5{
     font-weight: 700 !important;    
     letter-spacing: 2px;
 }
 .row{
     --bs-gutter-x: 0 !important;
+}
+
+p{
+    padding-top: 10px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 14px;
 }
 /* Header */
 .header{
@@ -169,4 +175,30 @@ h6{
 .numbers .no4{
     border: 1px #0f89d1;
     border-style: solid none none solid;
+}
+
+/* Doctors */
+.doctors{
+    padding: 5em 8em;
+}
+.doctors h5{
+    color: #333333;
+}
+.plus-1{
+    color: #6cc8fd;
+}
+.plus-2{
+    color: #33a9ee;
+}
+.plus-3{
+    color: #0f89d1;
+}
+
+.doctors p{
+    color: #999999;
+}
+
+.doctors .col{
+    padding: 0 2em;
+    height: 20em;
 }
