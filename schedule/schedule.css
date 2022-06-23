@@ -141,3 +141,32 @@ h6{
     letter-spacing: 2px;
     font-weight: 600;
 }
+.appointment h6{
+    font-size: 10px;
+}
+
+.appointment img{
+    height: 2em;
+}
+
+.appointment .icon{
+    display: flex;
+    justify-content: center;
+}
+
+.numbers .no1{
+    border: 1px #0f89d1;
+    border-style: none solid solid none;
+}
+.numbers .no2{
+    border: 1px #0f89d1;
+    border-style: none none solid solid;
+}
+.numbers .no3{
+    border: 1px #0f89d1;
+    border-style: solid solid none none;
+}
+.numbers .no4{
+    border: 1px #0f89d1;
+    border-style: solid none none solid;
+}
