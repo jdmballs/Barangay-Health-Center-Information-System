@@ -147,7 +147,7 @@ p{
     letter-spacing: 2px;
     font-weight: 600;
 }
-.appointment h6{
+.appointment > h6{
     font-size: 10px;
 }
 
@@ -201,4 +201,39 @@ p{
 .doctors .col{
     padding: 0 2em;
     height: 20em;
+}
+.img-area {
+    position: relative;
+    background: #0f89d1;
+}
+
+.img-text,
+.img-area::after{
+    width: 100%;
+    position: absolute;
+    left: 0;
+}
+
+.img-area::after{
+    content: '';
+    height: 25%;
+    bottom: 0;
+    transition: .2s;
+}
+.img-area:hover::after{
+    background: #0f8ad1bb;
+}
+.img-text{
+    color: transparent;
+    bottom: 0;
+    z-index: 1;
+    transition: all .2s cubic-bezier(.13, .62 ,.81,.91);
+    transform: translateY(1em);
+}
+.img-text p{
+    color: transparent;
+}
+.img-area:hover .img-text, .img-area:hover p{
+    color: #fff;
+    transform: translateY(0);
 }
