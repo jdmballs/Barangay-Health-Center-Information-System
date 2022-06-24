@@ -1,0 +1,4 @@
+1. pa ignore nalang ng .divider div kapag icocopy na sa code niyo.
+2. pa check ako if nagshoshow yung heart rate background sa header/middle navbar.
+	> if hindi nagshoshow, pa modify nalang sa scss > .info-nav > &::after {background-images},
+	  either tangalin yung / before text image or dagdagan ng . before /.
