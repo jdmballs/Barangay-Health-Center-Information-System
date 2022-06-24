@@ -1,0 +1,493 @@
+// Variables for Fonts
+$navFont: 'Montserrat' , sans-serif;
+$primaryFont: 'Raleway', sans-serif;
+$secondaryFont: 'PT Sans', sans-serif;
+
+// Variables for Color Pallete
+$top-nav: #F5F5F5;
+$primary-color: #0f89d1;
+$secondary-color : #0779bc;
+$text: #999;
+$paragraph: #666;
+$linear-bg: linear-gradient(to right,#0f89d1 50%, #0779bc 50%);
+$linear-bg-sm: linear-gradient(to right,#0f89d1, #0f89d1);
+$footer-light: #15191c;
+$footer-dark: #111416;
+
+
+// delete the .divider after you copy the code
+.divider {
+    height: 50em;
+    background-color: #eee;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $primaryFont;
+}
+
+.nav {
+    font-family: $secondaryFont;
+    color: $text;
+    font-size: 15px;
+    overflow: hidden;
+}
+
+// TOPMOST NAVIGATION BAR
+.nav-top {
+    background-color: $top-nav;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.3em 18.8em;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+
+    p{
+        margin: 0.8em 0;
+        font-weight: 600;
+
+        @media screen and (max-width:1290px) {padding-left: 2em;}
+    }
+    
+    .topleft {
+        display: flex;
+
+        ul {
+            list-style-type: none;
+            display: flex;
+    
+            li {
+                padding-left: 1em;
+
+                    a { text-decoration: none; }
+            }
+        }
+
+        .callAmbulance {
+            text-decoration: none;
+            margin-left: 2em;
+            background-color: #0f89d1;
+            color: #fff;
+            padding: 10px 20px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-align: center;
+            border-radius: 5px;
+            transition: ease 0.9s;
+            cursor: pointer;
+
+            &:hover {
+                outline: 1px solid $primary-color;
+                background-color: transparent;
+                color: $primary-color;
+            }
+        }
+    
+    }
+
+    .fa-brands { 
+        color: $text;
+        padding: 5px 15px;
+        line-height: 2em;
+
+        &:hover{
+            color: $primary-color;
+        }
+     }
+
+    .fa-twitter { color: $primary-color; }
+
+    @media screen and (max-width:1290px) {padding: 0.3em 6.9em;}
+
+}
+
+//  MIDDLE NAVIGATION BAR
+
+.info-nav {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    padding: 0.7em 10em;
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        background-image: url('/images/heartratee.png');
+        background-size: contain;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        opacity: 0.4;
+    }
+
+
+    .logo {
+        display: flex;
+        padding: 0.8em 4.8em;
+        
+        img{width: 60px; height: 60px; }
+
+        #logo-name {
+            color: $primary-color;
+            line-height: 1.2em;
+            padding-left: 0.5em;
+            font-size: 50px;
+            font-weight: bold;
+        }
+    }
+
+    #contact-info {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px 60px;
+        position: relative;
+
+        @media screen and (max-width:1290px) { margin: 20px 40px;}
+    }
+
+    .location, .call-us {
+        margin: 0.3em 1em 0 4em ; 
+        font-family: $navFont;
+
+        span {
+            color: #000;
+            position: absolute;
+            padding-left: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 2.5px;
+        }
+
+        #custSupport{ letter-spacing: 3.8px;}
+        
+        p {
+            color: $paragraph; 
+            font-weight: 500; 
+            font-size: 12px;
+            padding-top: 2px;
+        }
+    }
+
+    #navicon {width: 20px; height: 20px; }
+
+    @media screen and (max-width:1290px) {padding: 0.7em 2em;}
+}
+
+
+//THE BOTTOM/MAIN NAVIGATION BAR
+.main-nav {
+    background-image: $linear-bg;
+    display: flex;
+}
+
+.nav--hidden {
+    transform: translateY(calc(-1 * var(--nav-height)));
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 24px;
+    margin: 0 auto;
+
+    .nav-menu {
+        display: flex;
+        justify-content: space-between;
+        gap: 80px;
+        padding-right: 6em;
+        
+        li { list-style: none; }
+
+        .nav-link {
+            color: #fff;
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: 0.7s ease;
+            position: relative;
+
+            &::after{
+                content: "";
+                position: absolute;
+                background-color: rgb(255, 255, 255);
+                height: 3px;
+                width: 0;
+                left: 0;
+                bottom: -14px;
+                transition: 0.3s;
+            }
+            
+            &:hover{
+                color: rgb(255, 255, 255);
+
+                &::after { width: 100%; }
+            }
+
+            @media screen and (max-width:490px){font-size: 10px !important;}
+        }
+    }
+    @media screen and (max-width:490px) {top: 225px;}
+}
+
+.emergency-button { background-color: $secondary-color; }
+
+.callAmbulance2 {
+    font-size: 12px;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    padding: 8px 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    transition: ease 0.9s;
+    height: 30px;
+    margin: 15px 10px;
+    display: none;
+
+    &:hover {
+        background-color: transparent;
+        color: #fff;
+    }
+
+    @media screen and (max-width:490px) {font-size: 10px;}
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 1em 2em;
+
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background-color: #fff;
+    }
+}
+
+
+// POP UP FORM
+
+.bchis-modal {
+    position: absolute;
+    width: 100%;
+    top: 15em;
+    display: none;
+    z-index: 1;
+}
+
+#emergency-form{
+    border: 3px solid rgba(200, 200, 200, 0.496);
+    width: 25em;
+    font-family: $primaryFont;
+    background-color: #fff;
+    padding: 0.8em 1em;
+    margin: 0 auto;
+
+    .user-details, .form-buttons, .top-form {margin: 0 1em;}
+
+    .top-form {
+        display: flex;
+        justify-content: space-between;
+        padding: 2em 0 1em;
+        align-items: center;
+
+        .left {display: flex;}
+        img {
+            width: 23px;
+            height: 20px;
+            margin-right: 10px;
+        }
+    }
+
+    .fa-xmark, h1 {color: $paragraph;}
+    .fa-xmark{cursor: pointer; color: $secondary-color; font-size: 30px;}
+    h1 {font-size: 16px;}
+
+    .user-details input, textarea {
+        border: 2px solid rgba(200, 200, 200, 0.496);
+        width: 100%;
+        font-family: $navFont;
+        letter-spacing: 0.5px;
+        margin: 1em 0;
+        padding: 0.5em 0.2em;
+
+        &::placeholder{
+            color: rgb(183, 182, 182);
+            font-weight: 600;
+        }
+    }
+
+    #comments {
+        height: 10em;
+        resize: none;
+    }
+
+    .form-buttons {
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        label {
+            font-size: 14px;
+            color: rgb(183, 182, 182);
+            font-weight: 500;
+            line-height: 20px;
+        }
+
+        input[type="checkbox"] {
+            width: 15px;
+            height: 15px;
+            border: 1px solid rgb(183, 182, 182);
+        }
+        .fa-heart {padding-right: 10px;}
+
+        button {
+            padding: 1em 1.5em;
+            background-color: $primary-color;
+            color: #fff;
+            border: none;
+            letter-spacing: 1px;
+            font-weight: 600;
+            cursor: pointer;
+
+            img{padding-right: 10px;}
+        }
+    }
+}
+
+.bchis-modal {
+    position: absolute;
+    width: 100%;
+    top: 18em;
+
+}
+
+
+
+
+
+
+// MEDIA QUERIES
+
+
+@media screen and (max-width:1074px) {
+
+    .nav-top { padding: 0.8em 2em; }
+    .info-nav { 
+        padding: 0.1em 0;
+
+        .logo {
+            padding: 0.6em 1.5em;
+            
+            img { width: 50px; height: 50px; }
+            #logo-name{font-size: 2.4em; padding-top: 0.1em;}
+        }
+    }
+
+    #contact-info { margin: 10px 20px !important;}
+
+    .location, .call-us { 
+        margin: 0 ; 
+        font-size: 10px;
+
+        span { padding-left: 0; font-size: 14px !important; padding-top: 5px; }
+    }
+}
+
+@media screen and (max-width:800px) {
+
+    .hamburger { display: block;}
+    .hamburger.active .bar:nth-child(2) { opacity: 0;}
+    .hamburger.active .bar:nth-child(1) {transform: translateY(8px) rotate(45deg)}
+    .hamburger.active .bar:nth-child(3) {transform: translateY(-8px) rotate(-45deg)}
+    .main-nav {
+        background-image: $linear-bg-sm;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .nav-menu { 
+        position: fixed; 
+        left: -100%;
+        top: 170px;
+        gap: 10px !important;
+        flex-direction: column;
+        background-color: $primary-color;
+        width: 100%;
+        text-align: center;
+        padding-left: 6em;
+        transition: 0.3s;
+        z-index: 99;
+
+            &.active {left: 0}
+    }
+
+    .nav-item {margin: 16px 0;}
+    .callAmbulance2{display: block;}
+    .nav-top { display: none;}
+
+    .info-nav {
+        flex-direction: column;
+        padding: 0;
+        
+            &::after {
+                content: "";
+                background-image: none;
+            }
+
+        .logo {
+            padding: 10px 0;
+            background-color: #f5f5f5;
+            justify-content: center;
+
+            img { height: 30px; width: 30px;}
+            #logo-name { font-size: 20px; padding-top: 2px;}
+        }
+    
+        #contact-info { margin: 20px 60px;}
+    
+        .location, .call-us {
+            margin: 2px; 
+    
+            span {font-size: 16px;}
+            #custSupport{ letter-spacing: 3.8px;}
+            
+            p {
+                color: $paragraph; 
+                font-weight: 500; 
+                font-size: 12px;
+                padding-top: 2px;
+            }  
+        }  
+    }
+}
+
+
+@media screen and (max-width:490px) {
+    
+    .nav-menu { top: 230px; }
+    .nav-link{font-size: 12px;}
+
+    .info-nav .location, .call-us{
+            span {font-size: 12px !important;}
+            #custSupport{ letter-spacing: 3.8px;}
+    }
+
+    #contact-info {
+        flex-wrap: wrap;
+        gap: 1em;
+
+            #custSupport {line-height: 0.7em;}
+    }  
+}
