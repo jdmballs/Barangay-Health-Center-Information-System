@@ -80,6 +80,7 @@ font-family: 'Raleway', sans-serif; */
     font-family: 'PT Sans', sans-serif;
     font-size: 12px;
     letter-spacing: 3px;
+    width: 60%;
 }
 
 .path{
@@ -236,4 +237,98 @@ font-family: 'Raleway', sans-serif; */
 .img-area:hover .img-text, .img-area:hover p{
     color: #fff;
     transform: translateY(0);
+}
+
+@media screen and (min-width: 920px) and (max-width: 1160px) {
+    .msgboard .col-lg-2{
+        width: 21% !important;
+        margin: 0 !important;
+    }
+    .msgboard .justify-content-center{
+        justify-content: space-around !important;
+    }
+    .msgboard td{
+        padding: 10px 10px 0 10px;
+    }
+}
+@media screen and (max-width: 965px) {
+    .msgboard td{
+        padding: 10px 5px 0 5px;
+    }
+    
+}
+@media screen and (min-width:800px) and (max-width: 920px) {
+    .msgboard .col-lg-2{
+        width: 25% !important;
+        margin: 0 !important;
+    }
+    .msgboard .justify-content-center{
+        justify-content: space-between !important;
+        margin: 10px;
+    }
+    .msgboard td{
+        padding: 10px 5px 0 5px;
+    }
+    .msgboard{
+        top: -12em;        
+    }
+    .msgboard .row{
+        padding-top: 13em;
+    }
+    .appointment .grid{
+        width: fit-content;
+    }
+}
+@media screen and (max-width:800px) {
+    
+    .msgboard .justify-content-center{
+        justify-content: space-between !important;
+        margin: 10px;
+    }
+    .msgboard td{
+        padding: 10px 5px 0 5px;
+    }
+    .msgboard{
+        top: -12em;
+        height: auto;
+    }
+    .msgboard .row{
+        padding-top: 13em;
+    }
+    .msgboard td{
+        border-bottom: solid 1px #fff;
+    }
+    .emergency h6, .hours h6,
+    .emergency p, .hours td{
+        color: #fff !important;
+    }
+    .emergency hr, .hours hr{
+        background-color: #fff;
+    }
+    
+    .new-reg h6, .timetable h6,
+    .new-reg p, .timetable p{
+        color: #0f89d1;
+    }
+    
+    .new-reg hr, .timetable hr{
+        background-color: #0f89d1;
+    }
+
+    .hours table{
+        width: 100%;
+    }
+    
+}
+@media screen and (max-width: 800px) {
+    .appointment .grid{
+        width: 80% !important;
+    }
+    .appointment .book{
+        text-align: center;
+        margin-bottom: 2em;
+    }
+    .book hr{
+        margin: 2em auto;
+    }
 }
