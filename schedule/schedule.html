@@ -6,240 +6,333 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BHCIS | Schedules</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="schedule.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/schedule.css">
     <!-- FONTS -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 <body>
-    <!-- Banner -->
-    <header class="header">
-        <div class="overlay"></div>
-        <div class="content mt-5 text-center">
-            <h1>SCHEDULES</h1>
-            <hr color="#0f89d1" class="mx-auto">
-            <p class="p-4">On the other hand, we denounce with righteous indignation and dislike men who are <br>
-                so beguiled and demoralized by the charms of pleasure of the moment</p>
-            <p class="path">HOME &nbsp; <i class="fa-solid fa-angle-right"></i> &nbsp; SCHEDULES</p>
+    <!-- THIS IS TOPMOST NAVIGATION BAR -->
 
-        </div>
-    </header>
+    <div class="nav nav-top">
+        <p>Where Health Care is a Right, Not a Privelege. Since 2015.</p>
 
-    <!-- Message Board -->
-    <div class="msgboard">
-        <div class="row justify-content-center">
-            <div class="emergency col-2 mx-3">
-                <h6>EMERGENCY CASE</h6>
-                <hr color="#fff">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Error aliquid, nisi illum cumque fugit nostrum distinctio.
-                </p>
-            </div>  
-            <div class="new-reg col-2 ms-3">
-                <h6>NEW REGISTRATION</h6>
-                <hr color="#fff">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Error aliquid, nisi illum cumque fugit nostrum distinctio.
-                </p>
-            </div>
-            <div class="hours col-2 ms-4">
-                <h6>OPENING HOURS</h6>
-                <hr color="#0f89d1">
-                <table class="p-0">
-                    <tr>
-                        <td>Monday-Friday</td>
-                        <td>8:00 - 18:00</td>
-                    </tr>
-                    <tr>
-                        <td>Saturday</td>
-                        <td>8:00 - 16:00</td>
-                    </tr>
-                    <tr>
-                        <td>Sunday</td>
-                        <td>8:00 - 13:00</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="timetable col-2 mx-3">
-                <h6>TIMETABLE</h6>
-                <hr color="#0f89d1">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Error aliquid, nisi illum cumque fugit nostrum distinctio.
-                </p>
-            </div>
+        <div class="topleft">
+            <ul>
+                <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-google-plus-g"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-tumblr"></i></a></li>
+            </ul>
+            <a class="callAmbulance" id="callambulance_emergency"> CALL AN AMBULANCE</a>
         </div>
-        
     </div>
 
-    <!-- Book an Appointment -->
-    <div class="appointment">
-        <div class="row justify-content-center pb-5">
-            <div class="col-4">
-                <h6>ONLINE APPOINTMENT</h6>
-                <hr color="#0f89d1">
-                <h3>Powered by over <b>4,000</b>  <br>
-                    Patients trust us with their <br>
-                    sweet love. </h3>
-                <button class="btn my-4">BOOK AN APPOINTMENT</button>
-            </div>
-            <div class="col-4">
-                <div class="row numbers">
-                    <div class="col row py-4 no1">
-                        <div class="col-4 icon">
-                            <img src="../assets/icons/hospital address.png" alt="">
-                        </div>
-                        <div class="col">
-                            <h3>617</h3>
-                            <h6>HOSPITAL ROOMS</h6>
-                        </div>
-                    </div>
-                    <div class="col row py-4 no2">
-                        <div class="col-4 icon">
-                            <img src="../assets/icons/health-staff.png" alt="">
-                        </div>
-                        <div class="col">
-                            <h3>458</h3>
-                            <h6>QUALIFIED STAFF</h6>
-                        </div>
-                    </div>
+
+    <!-- POP UP FORM -->
+    <div class="bchis-modal">
+        <form action="" id="emergency-form"> <!--onsubmit="process(event)" -->
+            <div class="top-form">
+                <div class="left">
+                    <img src="images/emergency.png" alt="">
+                    <h1>EMERGENCY FORM</h1>                    
                 </div>
-                <div class="row numbers">
-                    <div class="col row py-4 no3">
-                        <div class="col-4 icon">
-                            <img src="../assets/icons/satisfied patients.png" alt="">
+                <i class="fa-solid fa-xmark" id="close"></i>
+            </div>
+
+
+            <div class="user-details">
+                <input type="text" placeholder="Your Name" name="fullname" required> <br>
+                <input type="text" placeholder="Address" name="address" required> <br>
+                <input type="tel" placeholder="Phone Number" name="contact" pattern="+639"required> <br>
+                <textarea id="comments" class="input-textarea" name="comment" placeholder="Your Message..."></textarea> <br>
+            </div>
+
+            <div class="form-buttons">
+                <label> <input type="checkbox"> Email Notification </label>
+                <button> <i class="fa-solid fa-heart"></i>SUBMIT</button>
+            </div>
+        </form>  
+    </div>
+    <!-- END OF POP UP FORM -->
+
+
+    <!-- THIS IS THE MIDDLE NAVIGATION BAR -->
+
+    <div class="nav info-nav">
+        <div class="logo">
+            <img src="images/BHCIS.png" alt="BHCIS Logo">
+            <p id="logo-name">BHCIS</p>
+        </div>
+
+        <div id="contact-info">
+            <div class="location">
+                <img src="images/hospital address.png" id="navicon" alt="hospital icon"> <span>OUR LOCATION</span>
+                <p>E44 - Web Corner, Melbourne - 18</p>
+            </div>
+
+            <div class="call-us">
+                <img src="images/247.png" id="navicon" alt="hospital icon"> <span id="custSupport">(+1)800 433 633</span>
+                <p>Call Us Now - 24/7 Customer Support</p>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- THIS IS THE BOTTOM/MAIN NAVIGATION BAR  -->
+    <div class="nav main-nav" id="main-nav">
+        <div class="emergency-button" ><a class="callAmbulance2" id="emergency-button"> CALL AN AMBULANCE</a></div>
+        <nav class="navbar" id="navbar">
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="" class="nav-link" id="nav-item">Home</a></li>
+                <li class="nav-item"><a href="" class="nav-link" id="nav-item">About Us</a></li>
+                <li class="nav-item"><a href="" class="nav-link" id="nav-item">Services</a></li>
+                <li class="nav-item"><a href="" class="nav-link" id="nav-item">Schedules</a></li>
+                <li class="nav-item"><a href="" class="nav-link" id="nav-item">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="hamburger">
+            <span class="bar" ></span>
+            <span class="bar" ></span>
+            <span class="bar" ></span>
+        </div>
+    </div>
+
+    <div class="sched">    
+        <!-- Banner -->
+        <header class="header">
+            <div class="overlay"></div>
+            <div class="content mt-5 text-center">
+                <h1>SCHEDULES</h1>
+                <hr color="#0f89d1" class="mx-auto">
+                <p class="p-4">On the other hand, we denounce with righteous indignation and dislike men who are <br>
+                    so beguiled and demoralized by the charms of pleasure of the moment</p>
+                <p class="path">HOME &nbsp; <i class="fa-solid fa-angle-right"></i> &nbsp; SCHEDULES</p>
+
+            </div>
+        </header>
+
+        <!-- Message Board -->
+        <div class="msgboard">
+            <div class="row justify-content-center">
+                <div class="emergency col-2 mx-3">
+                    <h6>EMERGENCY CASE</h6>
+                    <hr color="#fff">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Error aliquid, nisi illum cumque fugit nostrum distinctio.
+                    </p>
+                </div>  
+                <div class="new-reg col-2 ms-3">
+                    <h6>NEW REGISTRATION</h6>
+                    <hr color="#fff">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Error aliquid, nisi illum cumque fugit nostrum distinctio.
+                    </p>
+                </div>
+                <div class="hours col-2 ms-4">
+                    <h6>OPENING HOURS</h6>
+                    <hr color="#0f89d1">
+                    <table class="p-0">
+                        <tr>
+                            <td>Monday-Friday</td>
+                            <td>8:00 - 18:00</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td>8:00 - 16:00</td>
+                        </tr>
+                        <tr>
+                            <td>Sunday</td>
+                            <td>8:00 - 13:00</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="timetable col-2 mx-3">
+                    <h6>TIMETABLE</h6>
+                    <hr color="#0f89d1">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Error aliquid, nisi illum cumque fugit nostrum distinctio.
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Book an Appointment -->
+        <div class="appointment">
+            <div class="row justify-content-center pb-5">
+                <div class="col-4">
+                    <h6>ONLINE APPOINTMENT</h6>
+                    <hr color="#0f89d1">
+                    <h3>Powered by over <b>4,000</b>  <br>
+                        Patients trust us with their <br>
+                        sweet love. </h3>
+                    <button class="btn my-4">BOOK AN APPOINTMENT</button>
+                </div>
+                <div class="col-4">
+                    <div class="row numbers">
+                        <div class="col row py-4 no1">
+                            <div class="col-4 icon">
+                                <img src="../assets/icons/hospital address.png" alt="">
+                            </div>
+                            <div class="col">
+                                <h3>617</h3>
+                                <h6>HOSPITAL ROOMS</h6>
+                            </div>
                         </div>
-                        <div class="col">
-                            <h3>4200</h3>
-                            <h6>SATISFIED PATIENTS</h6>
+                        <div class="col row py-4 no2">
+                            <div class="col-4 icon">
+                                <img src="../assets/icons/health-staff.png" alt="">
+                            </div>
+                            <div class="col">
+                                <h3>458</h3>
+                                <h6>QUALIFIED STAFF</h6>
+                            </div>
                         </div>
                     </div>
-                    <div class="col row py-4 no4"> 
-                        <div class="col-4 icon">
-                            <img src="../assets/icons/doctor medals.png" alt="">
-                        </div>
-                        <div class="col ">
+                    <div class="row numbers">
+                        <div class="col row py-4 no3">
+                            <div class="col-4 icon">
+                                <img src="../assets/icons/satisfied patients.png" alt="">
+                            </div>
                             <div class="col">
-                            <h3>124</h3>
-                            <h6>DOCTORS MEDAL</h6>
+                                <h3>4200</h3>
+                                <h6>SATISFIED PATIENTS</h6>
+                            </div>
+                        </div>
+                        <div class="col row py-4 no4"> 
+                            <div class="col-4 icon">
+                                <img src="../assets/icons/doctor medals.png" alt="">
+                            </div>
+                            <div class="col ">
+                                <div class="col">
+                                <h3>124</h3>
+                                <h6>DOCTORS MEDAL</h6>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Meet the Doctors -->
-    <div class="doctors text-center">
-        <h5>MEET OUR DOCTORS</h5>
-        <div class="d-flex justify-content-center">
-            <h3 class="plus-1">+</h3>
-            <h3 class="plus-2">+</h3>
-            <h3 class="plus-3">+</h3>
-        </div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <div class="row m-5 px-5">
-            <div class="col">
-                <div class="img-area">
-                    <img src="../assets/sched/doctor-1.jpg" alt="" class="w-100 h-100">
-                    <div class="img-text text-start px-3">
-                        <h6 class="dname m-0">Lisa</h6>
-                        <h6 class="dname m-0">Cardiologist</h6>
-                        <p class="dname my-1">M-W-F | 8:00 - 12:00</p>
+        <!-- Meet the Doctors -->
+        <div class="doctors text-center">
+            <h5>MEET OUR DOCTORS</h5>
+            <div class="d-flex justify-content-center">
+                <h3 class="plus-1">+</h3>
+                <h3 class="plus-2">+</h3>
+                <h3 class="plus-3">+</h3>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="row m-5 px-5">
+                <div class="col">
+                    <div class="img-area">
+                        <img src="../assets/sched/doctor-1.jpg" alt="" class="w-100 h-100">
+                        <div class="img-text text-start px-3">
+                            <h6 class="dname m-0">Lisa</h6>
+                            <h6 class="dname m-0">Cardiologist</h6>
+                            <p class="dname my-1">M-W-F | 8:00 - 12:00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="img-area">
+                        <img src="../assets/sched/doctor-2.jpg" alt="" class="w-100 h-100">
+                        <div class="img-text text-start px-3">
+                            <h6 class="dname m-0">Lisa</h6>
+                            <h6 class="dname m-0">Cardiologist</h6>
+                            <p class="dname my-1">M-W-F | 8:00 - 12:00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="img-area">
+                        <img src="../assets/sched/doctor-3.jpg" alt="" class="w-100 h-100">
+                        <div class="img-text text-start px-3">
+                            <h6 class="dname m-0">Lisa</h6>
+                            <h6 class="dname m-0">Cardiologist</h6>
+                            <p class="dname my-1">M-W-F | 8:00 - 12:00</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="img-area">
-                    <img src="../assets/sched/doctor-2.jpg" alt="" class="w-100 h-100">
-                    <div class="img-text text-start px-3">
-                        <h6 class="dname m-0">Lisa</h6>
-                        <h6 class="dname m-0">Cardiologist</h6>
-                        <p class="dname my-1">M-W-F | 8:00 - 12:00</p>
+            <div class="row m-5 px-5">
+                <div class="col">
+                    <div class="img-area">
+                        <img src="../assets/sched/doctor-4.jpg" alt="" class="w-100 h-100">
+                        <div class="img-text text-start px-3">
+                            <h6 class="dname m-0">Lisa</h6>
+                            <h6 class="dname m-0">Cardiologist</h6>
+                            <p class="dname my-1">M-W-F | 8:00 - 12:00</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="img-area">
-                    <img src="../assets/sched/doctor-3.jpg" alt="" class="w-100 h-100">
-                    <div class="img-text text-start px-3">
-                        <h6 class="dname m-0">Lisa</h6>
-                        <h6 class="dname m-0">Cardiologist</h6>
-                        <p class="dname my-1">M-W-F | 8:00 - 12:00</p>
+                <div class="col">
+                    <div class="img-area">
+                        <img src="../assets/sched/doctor-5.jpg" alt="" class="w-100 h-100">
+                        <div class="img-text text-start px-3">
+                            <h6 class="dname m-0">Lisa</h6>
+                            <h6 class="dname m-0">Cardiologist</h6>
+                            <p class="dname my-1">M-W-F | 8:00 - 12:00</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="row m-5 px-5">
-            <div class="col">
-                <div class="img-area">
-                    <img src="../assets/sched/doctor-4.jpg" alt="" class="w-100 h-100">
-                    <div class="img-text text-start px-3">
-                        <h6 class="dname m-0">Lisa</h6>
-                        <h6 class="dname m-0">Cardiologist</h6>
-                        <p class="dname my-1">M-W-F | 8:00 - 12:00</p>
+                <div class="col">
+                    <div class="img-area">
+                        <img src="../assets/sched/doctor-6.jpg" alt="" class="w-100 h-100">
+                        <div class="img-text text-start px-3">
+                            <h6 class="dname m-0">Lisa</h6>
+                            <h6 class="dname m-0">Cardiologist</h6>
+                            <p class="dname my-1">M-W-F | 8:00 - 12:00</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="img-area">
-                    <img src="../assets/sched/doctor-5.jpg" alt="" class="w-100 h-100">
-                    <div class="img-text text-start px-3">
-                        <h6 class="dname m-0">Lisa</h6>
-                        <h6 class="dname m-0">Cardiologist</h6>
-                        <p class="dname my-1">M-W-F | 8:00 - 12:00</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="img-area">
-                    <img src="../assets/sched/doctor-6.jpg" alt="" class="w-100 h-100">
-                    <div class="img-text text-start px-3">
-                        <h6 class="dname m-0">Lisa</h6>
-                        <h6 class="dname m-0">Cardiologist</h6>
-                        <p class="dname my-1">M-W-F | 8:00 - 12:00</p>
-                    </div>
-                </div>
-            </div>
 
-            
+                
+            </div>
+            <div class="row m-5 px-5">
+                <div class="col">
+                    <div class="img-area">
+                        <img src="../assets/sched/doctor-7.jpg" alt="" class="w-100 h-100">
+                        <div class="img-text text-start px-3">
+                            <h6 class="dname m-0">Lisa</h6>
+                            <h6 class="dname m-0">Cardiologist</h6>
+                            <p class="dname my-1">M-W-F | 8:00 - 12:00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="img-area">
+                        <img src="../assets/sched/doctor-8.jpg" alt="" class="w-100 h-100">
+                        <div class="img-text text-start px-3">
+                            <h6 class="dname m-0">Lisa</h6>
+                            <h6 class="dname m-0">Cardiologist</h6>
+                            <p class="dname my-1">M-W-F | 8:00 - 12:00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="img-area">
+                        <img src="../assets/sched/doctor.jpg" alt="" class="w-100 h-100">
+                        <div class="img-text text-start px-3">
+                            <h6 class="dname m-0">Lisa</h6>
+                            <h6 class="dname m-0">Cardiologist</h6>
+                            <p class="dname my-1">M-W-F | 8:00 - 12:00</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>        
         </div>
-        <div class="row m-5 px-5">
-            <div class="col">
-                <div class="img-area">
-                    <img src="../assets/sched/doctor-7.jpg" alt="" class="w-100 h-100">
-                    <div class="img-text text-start px-3">
-                        <h6 class="dname m-0">Lisa</h6>
-                        <h6 class="dname m-0">Cardiologist</h6>
-                        <p class="dname my-1">M-W-F | 8:00 - 12:00</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="img-area">
-                    <img src="../assets/sched/doctor-8.jpg" alt="" class="w-100 h-100">
-                    <div class="img-text text-start px-3">
-                        <h6 class="dname m-0">Lisa</h6>
-                        <h6 class="dname m-0">Cardiologist</h6>
-                        <p class="dname my-1">M-W-F | 8:00 - 12:00</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="img-area">
-                    <img src="../assets/sched/doctor.jpg" alt="" class="w-100 h-100">
-                    <div class="img-text text-start px-3">
-                        <h6 class="dname m-0">Lisa</h6>
-                        <h6 class="dname m-0">Cardiologist</h6>
-                        <p class="dname my-1">M-W-F | 8:00 - 12:00</p>
-                    </div>
-                </div>
-            </div>
-            
-        </div>        
     </div>
+    
     <!-- JAVASCRIPTS -->
+    <script src="js/nav-footer.js"></script>
     <script src="https://kit.fontawesome.com/52a9453a06.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 

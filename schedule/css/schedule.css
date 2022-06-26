@@ -7,22 +7,22 @@
 font-family: 'Montserrat', sans-serif;
 font-family: 'PT Sans', sans-serif;
 font-family: 'Raleway', sans-serif; */
-
-hr{
+ 
+.sched hr{
     width: 40px;
     height: 4px; 
     border: solid 1px transparent !important;
     opacity: 100% !important;
 }
-h6, h5{
+.sched h6, .sched h5{
     font-weight: 700 !important;    
     letter-spacing: 2px;
 }
-.row{
+.sched .row{
     --bs-gutter-x: 0 !important;
 }
 
-p{
+.sched p{
     padding-top: 10px;
     font-family: 'PT Sans', sans-serif;
     font-size: 14px;
