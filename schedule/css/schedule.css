@@ -199,9 +199,8 @@ font-family: 'Raleway', sans-serif; */
     color: #999999;
 }
 
-.doctors .col{
-    padding: 0 2em;
-    height: 20em;
+.doctors .col-md-4{
+    padding: 2em;
 }
 .img-area {
     position: relative;
@@ -255,7 +254,9 @@ font-family: 'Raleway', sans-serif; */
     .msgboard td{
         padding: 10px 5px 0 5px;
     }
-    
+    .doctors .col-md-4{
+        padding: 1em !important;
+    }
 }
 @media screen and (min-width:800px) and (max-width: 920px) {
     .msgboard .col-lg-2{
@@ -277,6 +278,9 @@ font-family: 'Raleway', sans-serif; */
     }
     .appointment .grid{
         width: fit-content;
+    }
+    .doctors .col-md-4{
+        padding: .5em !important;
     }
 }
 @media screen and (max-width:800px) {
@@ -314,13 +318,9 @@ font-family: 'Raleway', sans-serif; */
     .new-reg hr, .timetable hr{
         background-color: #0f89d1;
     }
-
     .hours table{
-        width: 100%;
+        width: 100% !important;
     }
-    
-}
-@media screen and (max-width: 800px) {
     .appointment .grid{
         width: 80% !important;
     }
@@ -331,4 +331,11 @@ font-family: 'Raleway', sans-serif; */
     .book hr{
         margin: 2em auto;
     }
+}
+
+@media (min-width: 768px) {
+.appointment .grid {
+    flex: 0 0 auto;
+    width: 40.333333% !important;
+}
 }

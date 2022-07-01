@@ -1,3 +1,11 @@
+::before {
+  box-sizing:unset !important;
+}
+
+p{
+  margin-bottom: 0 !important;
+}
+
 .footer-container {
   position: relative;
   display: -webkit-box;
@@ -55,15 +63,17 @@
 }
 
 .footer-container .banner .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
   padding: 1.5em 0;
-  width: 100%;
+  width: 100% !important;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
 }
 
 .footer-container .banner .container .details {
@@ -242,7 +252,7 @@ footer .right-footer form {
 footer .right-footer input[type="email"] {
   background-color: #1a1f22;
   padding: 1.2em 1em;
-  width: 24em;
+  width: 17em;
   color: #999;
   border: none;
   resize: vertical;
