@@ -1,0 +1,179 @@
+.hserv {
+  background-color: #999999;
+  margin: 20px;
+  width: auto;
+  padding: 14px 16px;
+  text-align: center;
+	font-size: 40px;
+	font-family: 'Raleway', sans-serif;
+  color: #FFFFFF;
+}
+
+.service{
+  background-color: #999999;
+  margin: 20px;
+  width: auto;
+  padding: 14px;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'PT Sans', sans-serif;
+  color: #FFFFFF;
+}
+
+.hr{
+  border: 2px solid #0584ce;
+}
+
+.best{
+  font-family: 'Comic Neue', cursive;
+  font-size: 30px;
+  margin: 25px;
+}
+
+.plus{
+  color: #0f89d1;
+  margin: 25px;
+  font-size: 25px;
+}
+
+.bestdesc{
+  font-family: 'PT Sans', sans-serif;
+  font-size: 20px;
+  margin: 25px;
+  color:#999999;
+}
+
+.fmed{
+    font-family: 'Comic Neue', cursive;
+    font-size: 20px;
+}
+
+.fmeddesc{
+    font-family: 'Comic Neue', cursive;
+    font-size: 20px;
+}
+
+.wed{
+  font-family: 'Comic Neue', cursive;
+  font-size: 20px;
+}
+
+.weddesc{
+  font-family: 'Comic Neue', cursive;
+  font-size: 20px;
+}
+
+.obp{
+  font-family: 'Comic Neue', cursive;
+  font-size: 20px;
+}
+
+.obpdesc{
+  font-family: 'Comic Neue', cursive;
+  font-size: 20px;
+}
+
+.ourservices{
+  font-family: 'Raleway', cursive;
+  font-size: 30px;
+  text-align: center;
+}
+
+.plusc{
+  text-align: center;
+  color: #0f89d1;
+  font-size: 25px;
+  margin: 25px;
+}
+
+
+/* Container holding the image and the text */
+/* Bottom right text */
+.text-block {
+  width: 136.5%;
+  bottom: 5px;
+  left: 60px;
+  background-color: rgb(22, 106, 214);
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  
+}
+
+.text-block1 {
+  width: 136.5%;
+  bottom: 5px;
+  left: 465px;
+  background-color: rgb(22, 106, 214);
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  
+}
+
+.text-block2 {
+  width: 136.5%;
+  bottom: 5px;
+  right: 0px;
+  background-color: rgb(22, 106, 214);
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  
+}
+
+.dots{
+  color:#999999;
+  font-family: 'Comic Neue', cursive;
+  font-size: 80px;
+  display:block;
+  text-align: center;
+}
+
+.featserv{
+  font-family: 'Raleway', cursive;
+  font-size: 20px;
+  left: 100px;
+  margin-left: 10%;
+}
+
+.plusfs{
+  left: 70px;
+  color: #0f89d1;
+  font-size: 25px;
+  margin-left: 10%;
+}
+
+/* Container holding the image and the text */
+
+/* Bottom right text */
+.text-block21 {
+  position: absolute;
+  bottom: 5px;
+  top: 1765px;
+  left: 268.5px;  
+  height: 475px;
+  width: 27.8%;
+  background-color: rgb(97, 183, 240);
+  color: white;
+  z-index: -1;
+}
+
+.meds{
+  font-family: 'PT Sans', sans-serif;
+  font-size: 20px;
+  margin: 25px;
+  color:white;
+}
+
+.text-block22 {
+  position: absolute;
+  bottom: 5px;
+  top: 1765px;
+  right: 13.4%;
+  height: 475px;
+  width: 350px;
+  background-color: rgb(97, 183, 240);
+  color: white;
+  z-index: -1;
+}
