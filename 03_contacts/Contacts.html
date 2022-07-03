@@ -4,38 +4,136 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="Contacts.css">
-    <link href="bootstrap.css" rel="stylesheet">
+    <title>BHCIS | Contact</title>
+
+    <!-- LOGO ICON -->
+    <link rel="short icon" type="x-icon" href="images/BHCIS.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 
 <body>
 
-    
+    <!-- THIS IS TOPMOST NAVIGATION BAR -->
 
-    <div class="contactLabel">
+    <div class="nav nav-top">
+        <p>Where Health Care is a Right, Not a Privelege. Since 2015.</p>
 
-        <h1> CONTACT </h1>
-
-            <p class="cLabel"> These Happy days are yours and mine Happy Days! The movie star <br> the professor and Mary ann here on Gilligans Isle. </p>
-            <p class="subCLabel"> HOME > CONTACT</p>
-
+        <div class="topleft">
+            <ul>
+                <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-google-plus-g"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-tumblr"></i></a></li>
+            </ul>
+            <a class="callAmbulance" id="callambulance_emergency"> CALL AN AMBULANCE</a>
+        </div>
     </div>
 
+
+    <!-- POP UP FORM -->
+    <div class="bchis-modal">
+        <form action="" id="emergency-form"> <!--onsubmit="process(event)" -->
+            <div class="top-form">
+                <div class="left">
+                    <img src="images/emergency.png" alt="">
+                    <h1>EMERGENCY FORM</h1>                    
+                </div>
+                <i class="fa-solid fa-xmark" id="close"></i>
+            </div>
+
+
+            <div class="user-details">
+                <input type="text" placeholder="Your Name" name="fullname" required> <br>
+                <input type="text" placeholder="Address" name="address" required> <br>
+                <input type="tel" placeholder="Phone Number" name="contact" pattern="+639"required> <br>
+                <textarea id="comments" class="input-textarea" name="comment" placeholder="Your Message..."></textarea> <br>
+            </div>
+
+            <div class="form-buttons">
+                <label> <input type="checkbox"> Email Notification </label>
+                <button> <i class="fa-solid fa-heart"></i>SUBMIT</button>
+            </div>
+        </form>  
+    </div>
+    <!-- END OF POP UP FORM -->
+
+
+    <!-- THIS IS THE MIDDLE NAVIGATION BAR -->
+
+    <div class="nav info-nav">
+        <div class="logo">
+            <img src="images/BHCIS.png" alt="BHCIS Logo">
+            <p id="logo-name">BHCIS</p>
+        </div>
+
+        <div id="contact-info">
+            <div class="location">
+                <img src="images/hospital address.png" id="navicon" alt="hospital icon"> <span>OUR LOCATION</span>
+                <p>E44 - Web Corner, Melbourne - 18</p>
+            </div>
+
+            <div class="call-us">
+                <img src="images/247.png" id="navicon" alt="hospital icon"> <span id="custSupport">(+1)800 433 633</span>
+                <p>Call Us Now - 24/7 Customer Support</p>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- THIS IS THE BOTTOM/MAIN NAVIGATION BAR  -->
+    <div class="nav main-nav" id="main-nav">
+        <div class="emergency-button" ><a class="callAmbulance2" id="emergency-button"> CALL AN AMBULANCE</a></div>
+        <nav class="navbar" id="navbar">
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="" class="nav-link" id="nav-item">Home</a></li>
+                <li class="nav-item"><a href="" class="nav-link" id="nav-item">About Us</a></li>
+                <li class="nav-item"><a href="" class="nav-link" id="nav-item">Services</a></li>
+                <li class="nav-item"><a href="" class="nav-link" id="nav-item">Schedules</a></li>
+                <li class="nav-item"><a href="" class="nav-link" id="nav-item">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="hamburger">
+            <span class="bar" ></span>
+            <span class="bar" ></span>
+            <span class="bar" ></span>
+        </div>
+    </div>
+
+    <!-- Banner -->
+    <header class="header">
+        <div class="overlay"></div>
+        <div class="content mt-lg-5 mt-3 text-center">
+            <h1>CONTACT</h1>
+            <hr color="#0f89d1" class="mx-auto">
+            <p class="p-md-3 p-1 text-center m-auto">On the other hand, we denounce with righteous indignation and dislike men who are
+                so beguiled and demoralized by the charms of pleasure of the moment</p>
+            <p class="path  m-auto">HOME &nbsp; <i class="fa-solid fa-angle-right"></i> &nbsp; CONTACT</p>
+
+        </div>
+    </header>
+
+    <!-- INFORMATION -->
     <div class="info">
-        <div class="row">
+        <div class="row px-5">
             <div class="col-md-4 my-5">
-                <i class="fa-solid fa-location-dot fa-3x mb-3"></i>
+                <i class="fa-solid fa-location-dot fa-2x mb-3"></i>
                 <p class="iconL"> ADDRESS </p>
-                <p class="iconD"> University of Santo Tomas Hospital, España Blvd, <br> Sampaloc, Manila, 1015 Metro Manila </p>
+                <p class="iconD"> University of Santo Tomas Hospital, España Blvd, Sampaloc, Manila, 1015 Metro Manila </p>
             </div>
             <div class="col-md-4 my-5">
-                <i class="fa-solid fa-mobile-screen-button fa-3x mb-3"></i>
+                <i class="fa-solid fa-mobile-screen-button fa-2x mb-3"></i>
                 <p class="iconL"> PHONE </p>
                 <p class="iconD"> (+1) 1800 457 678 <br> (+2) 1800 458 678</p>
             </div>
             <div class="col-md-4 my-5">
-                <i class="fa-solid fa-envelope fa-3x mb-3"></i>
+                <i class="fa-solid fa-envelope fa-2x mb-3"></i>
                 <p class="iconL"> EMAIL </p>
                 <p class="iconD"> Support@MaxiHealth.com <br> Info@MaxiHealth.com </p>
             </div>
@@ -43,11 +141,13 @@
 
     </div>
 
-    
+    <!-- MAP -->
     <div class="map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1623.2561112786923!2d120.99026904817148!3d14.611873761350452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b600fa156413%3A0xc6e53a28f2ca7c4b!2sUniversity%20of%20Santo%20Tomas%20Hospital!5e0!3m2!1sen!2sph!4v1656078916840!5m2!1sen!2sph" width="100%" height="450" style="border:0; padding: 0; margin: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> </iframe>
 
     </div>
+
+    <!-- FORM -->
 
     <div class="form col">
          <h2 class="contactLabel2"> Enquiry Us </h2>
@@ -72,7 +172,7 @@
                 <div class="row mt-3 mb-2">
                     <div class="col">
                         <label for="Details" class="form-label"> DETAILS </label>
-                        <textarea class="form-control" placeholder="Sean cutiepie" id="Details" rows="5"></textarea>
+                        <textarea class="form-control" placeholder="Message..." id="Details" rows="5"></textarea>
                     </div>
                 </div>
 
@@ -84,11 +184,86 @@
             </div>
 
          </form>
-
-
-
     </div>
 
+    <!-- THIS IS THE FOOTER  -->
+    <div class="footer-container">
+        <div class="banner">
+            <div class="container container-1">
+               <div class="icons" id="icon1"><img src="images/location.png" alt=""></div>
+               <div class="details">
+                    <div id="heading1">HOSPITAL ADDRESS</div>
+                    <div id="info">E44, Design Street, Web Corner Melbourne -005</div>
+               </div>
+            </div>
+            <div class="container container-2">
+                <div class="icons" id="icon2"><img src="images/call.png" alt=""></div>
+                <div class="details">
+                    <div id="heading1">EMERGENCY (27x7)</div>
+                    <div id="info">Mobile: (+1) 800 433 633 <br> Toll Free: (+1) 800 123 456</div>
+               </div>
+            </div>
+            <div class="container container-3">
+                <div class="icons" id="icon3"><img src="images/mail.png" alt=""></div>
+                <div class="details">
+                    <div id="heading1">EMAIL</div>
+                    <div id="info">info@bhcis.com <br> support@bhcis.com</div>
+               </div>
+            </div>
+       </div>
+    </div>
+
+    
+    <footer> 
+
+        <div class="left-footer">
+            <div class="bhc-logo">
+                <img src="images/BHCIS-03.png" alt="">
+                <p id="logo-name">BHCIS</p>
+            </div>
+
+            <p id="title1">Refer to the following schedule for Barangay Health Center's Open Hours on the following days.</p>
+            <div id="schedules">
+                <p class="date">Monday -Friday</p>
+                <p class="time">8:00 am - 3:00 pm</p>
+            </div>
+            <div id="schedules">
+                <p class="date">Saturday</p>
+                <p class="time">8:00 am - 2:00 pm</p>
+            </div>
+            <div id="schedules">
+                <p class="date">Sunday</p>
+                <p class="time">8:00 am - 2:00 pm</p>
+            </div>
+
+        </div>
+
+        <div class="right-footer">
+            <div id="title"><p>NEWSLETTER </p></div>
+            <p>Subscribe to our newsletter to keep up with health center's programs</p>
+
+            <form>
+                <input type="email" placeholder="Enter Email...">
+                <button type="submit" class="button_1"><i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+
+            <p id="title2">STAY CONNECTED </p>
+            <div class="socmed-links">
+                <a href=""><i class="fa-brands fa-facebook-square"></i></a>
+                <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                <a href=""><i class="fa-brands fa-google-plus-square"></i></a>
+                <a href=""><i class="fa-brands fa-instagram-square"></i></a>
+                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+ 
+
+    <div id="footer2">
+        &copy; 2015 Barangay Health Center Information System. All Rights Reserved.
+    </div>
+    <!-- JAVASCRIPTS -->
+    <script src="../js/nav-footer.js"></script>
     <script src="https://kit.fontawesome.com/52a9453a06.js" crossorigin="anonymous"></script>
     <script src="bootstrap.bundle.js"></script>
 </body>
