@@ -1,0 +1,176 @@
+h1{
+	font-family: RALEWAY;
+	font-size:  35px;
+	color: #333333;
+	text-align: center;
+	margin-bottom: 5px;
+}
+hr{
+	margin-top: 5px;
+}
+
+h3{
+	font-family: RALEWAY;
+	font-size:  20px;
+	color: #333333;
+	text-align: center;
+	margin-top: 70px;
+}
+p{
+	font-family: PTSANS;
+	font-size:  14px;
+	color: #999999;
+	text-align: center;
+	margin-left: 360px;
+	margin-right: 360px;
+}
+.yi{
+	margin-top: 30px;
+	
+}
+h4{
+	font-family: RALEWAY;
+	font-size:  20px;
+	color: #0f89d1;
+	text-align: left;
+	margin-top: 80px;
+	margin-left:150px;
+}
+.inline{
+    display: inline-block;
+	margin-left:150px;
+	margin-right: 15px;
+
+
+}
+h5{
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 2px;
+	font-family: MONTSERRAT;
+	font-size: 12px;
+	color: #333333;
+	
+	
+}
+.inline hr{
+	 display: inline-block;
+
+}
+.inline p{
+	display: inline-block;
+
+	font-family: PTSANS;
+	font-size:  11px;
+	color: #999999;
+	margin-left:1px; 
+	width: 132px;
+	margin-top:1px; 
+	text-align: left;
+
+	
+}
+.row{
+    display: inline-block;
+	margin-left:150px;
+	margin-top: 50px;
+
+}
+.row hr{
+	 display: inline-block;
+}
+.row p{
+	display: inline-block;
+
+	font-family: PTSANS;
+	font-size:  11px;
+	color: #999999;
+	margin-left:1px; 
+	width: 132px;
+	margin-top:1px; 
+	text-align: left;
+	
+}
+
+h6{
+	display: inline-block;
+	font-family: RALEWAY;
+	font-size:  20px;
+	color: #333333;
+	margin-bottom: 5px;
+	 margin-right: 50px;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 100px;
+  margin-bottom: 5px;
+}
+.list-item {
+ 
+  display: flex;
+  padding: 0.5em;
+  width:35%;
+  margin-right: 50px;
+  margin-bottom: 5px;
+}
+h2{
+	
+	font-family: PTSANS;
+	font-size:  20px;
+	color: #999999;
+	text-align: center;	
+}
+
+.list p {
+	font-family: PTSANS;
+	font-size:  14px;
+	color: #999999;
+	 width:70%;
+	  margin-left: 60px;
+	
+}
+.list hr {
+	  margin-left: 215px;
+}
+.goals{
+	margin-top: 100px; 
+}
+.plus-1{
+	color: #6cc8fd;
+    margin-left: 150px;
+    margin-top: 1px; 
+    margin-bottom: 40px;
+}
+.plus-2{
+	color: #33a9ee;
+    margin-left: 5px;
+    margin-top: 1px; 
+    margin-bottom: 40px;
+}
+.plus-3{
+	color: #0f89d1;
+    margin-left: 5px;
+    margin-top: 1px; 
+    margin-bottom: 40px;
+}
+.plus-4{
+	color: #6cc8fd;
+    margin-top: 1px; 
+    margin-bottom: 10px;
+    margin-left: 1px;
+}
+.plus-5{
+	color: #33a9ee;
+    margin-left: 5px;
+    margin-top: 1px; 
+    margin-bottom: 10px;
+}
+.plus-6{
+	color: #0f89d1;
+    margin-left: 5px;
+    margin-top: 1px; 
+    margin-bottom: 10px;
+}
+
