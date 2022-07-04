@@ -14,7 +14,7 @@ font-family: 'Raleway', sans-serif; */
     border: solid 1px transparent !important;
     opacity: 100% !important;
 }
-.sched h6, .sched h5{
+.sched h6, .sched h5, h3{
     font-weight: 700 !important;    
     letter-spacing: 2px;
 }
@@ -135,108 +135,99 @@ font-family: 'Raleway', sans-serif; */
 }
 
 
-/* Appointment */
+/*--------------------------------------------------------------
+# Appointments
+--------------------------------------------------------------*/
 .appointment{
-    color: #33a9ee;
-}
-.appointment .btn{
-    border-radius: 0;
-    background-color: #33a9ee;
-    width: 19em;
-    color: #fff;
-    font-family: Montserrat, sans-serif;
-    letter-spacing: 2px;
-    font-weight: 600;
-}
-.appointment > h6{
-    font-size: 10px;
-}
-
-.appointment img{
-    height: 2em;
-}
-
-.appointment .icon{
-    display: flex;
-    justify-content: center;
-}
-
-.numbers .no1{
-    border: 1px #0f89d1;
-    border-style: none solid solid none;
-}
-.numbers .no2{
-    border: 1px #0f89d1;
-    border-style: none none solid solid;
-}
-.numbers .no3{
-    border: 1px #0f89d1;
-    border-style: solid solid none none;
-}
-.numbers .no4{
-    border: 1px #0f89d1;
-    border-style: solid none none solid;
-}
-
-/* Doctors */
-.doctors{
-    padding: 5em 8em;
-}
-.doctors h5{
-    color: #333333;
-}
-.plus-1{
-    color: #6cc8fd;
-}
-.plus-2{
-    color: #33a9ee;
-}
-.plus-3{
-    color: #0f89d1;
-}
-
-.doctors p{
-    color: #999999;
-}
-
-.doctors .col-md-4{
+    margin: 0 10em 10em;
+    border: solid 5px rgba(153, 153, 153, 0.507);
     padding: 2em;
 }
-.img-area {
-    position: relative;
-    background: #0f89d1;
+.appointment hr{
+    background-color: #0f89d1;
 }
-
-.img-text,
-.img-area::after{
+.appointment .row, .appointment .form-group {
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    --bs-gutter-x: 1.5rem !important;
+}
+.appointment .php-email-form {
     width: 100%;
-    position: absolute;
-    left: 0;
-}
-
-.img-area::after{
-    content: '';
-    height: 25%;
-    bottom: 0;
-    transition: .2s;
-}
-.img-area:hover::after{
-    background: #0f8ad1bb;
-}
-.img-text{
-    color: transparent;
-    bottom: 0;
-    z-index: 1;
-    transition: all .2s cubic-bezier(.13, .62 ,.81,.91);
-    transform: translateY(1em);
-}
-.img-text p{
-    color: transparent;
-}
-.img-area:hover .img-text, .img-area:hover p{
+  }
+  .appointment .php-email-form .form-group {
+    padding-bottom: 8px;
+  }
+  .appointment .php-email-form .validate {
+    display: none;
+    color: red;
+    margin: 0 0 15px 0;
+    font-weight: 400;
+    font-size: 13px;
+  }
+  .appointment .php-email-form .error-message {
+    display: none;
     color: #fff;
-    transform: translateY(0);
-}
+    background: #ed3c0d;
+    text-align: left;
+    padding: 15px;
+    font-weight: 600;
+  }
+  .appointment .php-email-form .error-message br + br {
+    margin-top: 25px;
+  }
+  .appointment .php-email-form .sent-message {
+    display: none;
+    color: #fff;
+    background: #18d26e;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+  }
+  .appointment .php-email-form .loading {
+    display: none;
+    background: #fff;
+    text-align: center;
+    padding: 15px;
+  }
+  .appointment .php-email-form .loading:before {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px -6px 0;
+    border: 3px solid #18d26e;
+    border-top-color: #eee;
+    -webkit-animation: animate-loading 1s linear infinite;
+    animation: animate-loading 1s linear infinite;
+  }
+  .appointment .php-email-form input, .appointment .php-email-form textarea, .appointment .php-email-form select {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    padding: 10px !important;
+  }
+  .appointment .php-email-form input:focus, .appointment .php-email-form textarea:focus, .appointment .php-email-form select:focus {
+    border-color: #3fbbc0;
+  }
+  .appointment .php-email-form input, .appointment .php-email-form select {
+    height: 44px;
+  }
+  .appointment .php-email-form textarea {
+    padding: 10px 12px;
+  }
+  .appointment .php-email-form button[type=submit] {
+    background: #3fbbc0;
+    border: 0;
+    padding: 10px 35px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 0;
+  }
+  .appointment .php-email-form button[type=submit]:hover {
+    background: #52c2c6;
+  }
+  
 
 @media screen and (min-width: 920px) and (max-width: 1160px) {
     .msgboard .col-lg-2{
@@ -338,4 +329,12 @@ font-family: 'Raleway', sans-serif; */
     flex: 0 0 auto;
     width: 40.333333% !important;
 }
+}
+
+@media screen and (max-width: 1000px) {
+    .appointment{
+        
+    margin: 0 5em 10em !important;
+    }
+    
 }

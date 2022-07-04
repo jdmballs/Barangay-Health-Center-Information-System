@@ -17,11 +17,11 @@ hr{
     font-weight: 700 !important;    
     letter-spacing: 2px;
 }
-.row{
+.home .row{
     --bs-gutter-x: 0 !important;
 }
 
-p{
+.home .p{
     padding-top: 10px;
     font-family: 'PT Sans', sans-serif;
     font-size: 14px;
