@@ -1,0 +1,471 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif; 
+}
+/* 
+font-family: 'Montserrat', sans-serif;
+font-family: 'PT Sans', sans-serif;
+font-family: 'Raleway', sans-serif; */
+hr{
+    width: 40px;
+    height: 4px; 
+    border: solid 1px transparent !important;
+    opacity: 100% !important;
+}
+.sched h6, .sched h5{
+    font-weight: 700 !important;    
+    letter-spacing: 2px;
+}
+.row{
+    --bs-gutter-x: 0 !important;
+}
+
+p{
+    padding-top: 10px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 14px;
+}
+
+
+.sched{
+    height: 50em;
+}
+/* Header */
+.header{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.30), rgba(255, 255, 255, 0.30)), 
+        url(../../assets/home/multi-ethnic-group-of-doctors-posing-in-clinic-2021-09-24-04-09-30-utc.jpg);
+    background-size: cover;
+    height: 30em;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    clip-path: polygon(
+        100% 0, 
+        100% 60%, 
+        50% 100%,
+        0 60%, 
+        0 0);
+        
+}
+.header .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.header::before, .header::after{
+    content: '';
+    position: absolute;
+    width: 50vw;
+    height: 18em;
+    bottom: -6em;
+    z-index: 1;
+}
+.header::before{
+    background-color: #0f89d1;
+    left:0;
+    clip-path: polygon(0 0, 100% 55%, 100% 100%, 0% 100%);
+}
+.header::after{
+    background-color: #33a9ee;
+    clip-path: polygon(0 55%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.content h1{
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+
+.content p{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    width: 60%;
+}
+
+.path{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header p{
+    
+    color: #333333;
+    font-weight: 900 !important;
+}
+.header h1{
+    color: #333333;
+}
+
+.header .btn{
+    color: #fff;
+    
+    padding: 1em;
+    background-color: #33a9ee;
+    border-radius: 0;
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.content{
+    margin-top: 7em;
+}
+
+/* Message Board */
+.msgboard{
+    position: relative;
+    top: -12em;
+    height: 25em;
+    background: linear-gradient(
+        to right,
+        #33a9ee 0%,
+        #33a9ee 50%,
+        #fff 50%,
+        #fff 100%
+    );
+    z-index: -1;
+}
+
+.msgboard .row{
+    padding-top: 13em;
+    --bs-gutter-x: 0 !important;
+}
+
+
+.emergency h6, .new-reg h6{
+    color: #fff;
+}
+.emergency p, .new-reg p{
+    color: #fff;
+}
+
+.hours h6, .timetable h6{
+    color: #0f89d1;
+}
+
+.hours td, .timetable p{
+    color: #0f89d1;
+}
+.msgboard p, td{
+    padding-top: 10px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 14px;
+}
+
+.msgboard td{
+    padding: 10px 15px 0 0 ;
+    border-bottom: solid 1px #0f89d1;
+
+}
+
+/* Welcome */
+.welcome{
+	margin: 0 10em !important;
+	width: 50%;
+}
+.plus-1{
+	color: #6cc8fd;
+    margin-top: 1px; 
+    margin-bottom: 40px;
+}
+.plus-2{
+	color: #33a9ee;
+    margin-top: 1px;
+}
+.plus-3{
+	color: #0f89d1;
+    margin-top: 1px; 
+    margin-bottom: 40px;
+}
+.plus-4{
+	color: #6cc8fd;
+    margin-top: 1px; 
+    margin-bottom: 10px;
+    margin-left: 1px;
+}
+.plus-5{
+	color: #33a9ee;
+    margin-left: 5px;
+    margin-top: 1px; 
+    margin-bottom: 10px;
+}
+.plus-6{
+	color: #0f89d1;
+    margin-left: 5px;
+    margin-top: 1px; 
+    margin-bottom: 10px;
+}
+
+
+/* Welcome */
+h3, h6{
+    font-weight: 700 !important;    
+    letter-spacing: 2px;
+}
+.welcome hr{
+    background-color: #0f89d1;
+}
+
+
+/* Ads */
+.ads{
+    background-color: #0f89d1;
+    margin-top: 5em;
+    padding: 2em 10em;
+    color: #fff;
+}
+.ads .row{
+    margin: 0 10em;
+}
+
+.ads h4, .ads button{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.ads h4{
+    margin: 0;
+}
+
+.ads button{
+    border-radius: 0;
+    font-size: 12px;
+}
+
+/* What */
+.what .side{
+    background-color: #0779bc;
+    background-size: cover;
+    background-image: url(../../assets/home/population-vaccination-program-modern-immunizatio-2021-09-02-17-13-06-utc.jpg);
+}
+.what img{
+    height: 2em;
+    margin-bottom: 1em;
+}
+.what .plus-1,
+.what .plus-2,
+.what .plus-3{
+    margin: 0;
+}
+.blue, .light-blue, .white{
+    border: solid 1px #0f89d1;
+    height: 10em;
+    padding: 2em 0;
+}
+.blue{
+    color: #fff;
+    background-color: #0779bc;
+    padding: 2em 0;
+}
+.light-blue{
+    background-color: #f4faff;
+    padding: 2em 0;
+}
+.white{
+    
+    padding: 2em 0;
+}
+
+
+/* Appointment */
+.appointment{
+    color: #33a9ee;
+    padding-top: 5em;
+}
+.appointment .btn{
+    border-radius: 0;
+    background-color: #33a9ee;
+    width: 19em;
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+.appointment > h6{
+    font-size: 10px;
+}
+
+.appointment img{
+    height: 2em;
+}
+
+.appointment .icon{
+    display: flex;
+    justify-content: center;
+}
+
+.numbers .no1{
+    border: 1px #0f89d1;
+    border-style: none solid solid none;
+}
+.numbers .no2{
+    border: 1px #0f89d1;
+    border-style: none none solid solid;
+}
+.numbers .no3{
+    border: 1px #0f89d1;
+    border-style: solid solid none none;
+}
+.numbers .no4{
+    border: 1px #0f89d1;
+    border-style: solid none none solid;
+}
+
+@media screen and (max-width:1200px) {
+	.welcome{
+		width: 60%;
+	}
+    .sched{
+        height: 50em;
+    }
+    .ads .row{
+        margin: 0 5em;
+    }
+}
+
+@media screen and (max-width:800px) {
+	.welcome{
+		width: 80%;
+		margin: 5em 5em !important;
+	}
+    .sched{
+        height: 55em;
+    }
+    .ads .row{
+        margin: 0 !important;
+    }
+}
+
+@media screen and (max-width:500px) {
+	.welcome{
+		width: 80%;
+		margin: 5em 3em !important;
+	}
+}
+
+@media screen and (min-width: 920px) and (max-width: 1160px) {
+    .msgboard .col-lg-2{
+        width: 21% !important;
+        margin: 0 !important;
+    }
+    .msgboard .justify-content-center{
+        justify-content: space-around !important;
+    }
+    .msgboard td{
+        padding: 10px 10px 0 10px;
+    }
+}
+@media screen and (max-width: 965px) {
+    .msgboard td{
+        padding: 10px 5px 0 5px;
+    }
+    .doctors .col-md-4{
+        padding: 1em !important;
+    }
+}
+@media screen and (min-width:800px) and (max-width: 920px) {
+    .msgboard .col-lg-2{
+        width: 25% !important;
+        margin: 0 !important;
+    }
+    .msgboard .justify-content-center{
+        justify-content: space-between !important;
+        margin: 10px;
+    }
+    .msgboard td{
+        padding: 10px 5px 0 5px;
+    }
+    .msgboard{
+        top: -13em;        
+    }
+    .msgboard .row{
+        padding-top: 13em;
+    }
+    .appointment .grid{
+        width: fit-content;
+    }
+    .doctors .col-md-4{
+        padding: .5em !important;
+    }
+}
+@media screen and (max-width:800px) {
+    
+    .msgboard .justify-content-center{
+        justify-content: space-between !important;
+        margin: 10px;
+    }
+    .msgboard td{
+        padding: 10px 5px 0 5px;
+    }
+    .msgboard{
+        top: -13em;
+        height: auto;
+    }
+    .msgboard .row{
+        padding-top: 13em;
+    }
+    .msgboard td{
+        border-bottom: solid 1px #fff;
+    }
+    .emergency h6, .hours h6,
+    .emergency p, .hours td{
+        color: #fff !important;
+    }
+    .emergency hr, .hours hr{
+        background-color: #fff;
+    }
+    
+    .new-reg h6, .timetable h6,
+    .new-reg p, .timetable p{
+        color: #0f89d1;
+    }
+    
+    .new-reg hr, .timetable hr{
+        background-color: #0f89d1;
+    }
+    .hours table{
+        width: 100% !important;
+    }
+    .appointment .grid{
+        width: 80% !important;
+    }
+    .appointment .book{
+        text-align: center;
+        margin-bottom: 2em;
+    }
+    .book hr{
+        margin: 2em auto;
+    }
+}
+
+@media (min-width: 768px) {
+.appointment .grid {
+    flex: 0 0 auto;
+    width: 40.333333% !important;
+}
+}
+
+@media screen and (max-width: 600px) {
+    .blue, .light-blue, .white{
+        padding: 1em 0;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .content{
+        margin-top: 5em !important;
+    }
+    
+}
+
+@media screen and (max-width:500px) {
+    .content{
+        margin-top: 1em !important;
+    }
+}
