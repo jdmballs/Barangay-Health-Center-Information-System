@@ -206,6 +206,9 @@ font-family: 'Raleway', sans-serif; */
     box-shadow: none;
     font-size: 14px;
     padding: 10px !important;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
   }
   .appointment .php-email-form input:focus, .appointment .php-email-form textarea:focus, .appointment .php-email-form select:focus {
     border-color: #3fbbc0;
@@ -227,7 +230,6 @@ font-family: 'Raleway', sans-serif; */
   .appointment .php-email-form button[type=submit]:hover {
     background: #52c2c6;
   }
-  
 
 @media screen and (min-width: 920px) and (max-width: 1160px) {
     .msgboard .col-lg-2{

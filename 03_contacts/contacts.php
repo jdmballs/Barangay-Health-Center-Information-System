@@ -1,3 +1,4 @@
+<?php session_start()?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,7 @@
     <title>BHCIS | Contact</title>
 
     <!-- LOGO ICON -->
-    <link rel="short icon" type="x-icon" href="images/BHCIS.png">
+    <link rel="short icon" type="x-icon" href="images/BHCIS-03.png">
 
     <!-- CSS -->
     <link rel="stylesheet" href="../css/contact.css">
@@ -151,21 +152,23 @@
     <!-- FORM -->
 
     <div class="form col">
-         <h2 class="contactLabel2"> Enquiry Us </h2>
 
-         <form class="row">
+
+        <h2 class="contactLabel2"> Enquiry Us </h2>
+
+        <form method="post" action="sendmail.php" class="row">
             <div class="col-md-6">
                 <div class="row my-3">
                     <label for="FN" class="form-label"> NAME </label>
-                    <input type="text" class="form-control" placeholder="Full Name" aria-label="Full Name" id="FN">
+                    <input name="name" type="text" class="form-control" placeholder="Full Name" aria-label="Full Name" id="FN">
                 </div>
                 <div class="row my-3">
                     <label for="IM" class="form-label"> E-MAIL </label>
-                    <input type="email" class="form-control" placeholder="juandelacruz123@gmail.com" id="IM">
+                    <input name="email" type="email" class="form-control" placeholder="juandelacruz123@gmail.com" id="IM">
                 </div>
                 <div class="row my-3">
                     <label for="PN" class="form-label"> PHONE NUMBER </label>
-                    <input type="text" class="form-control" placeholder="+63XXXXXXXXXX" aria-label="Phone Number" id="PN">
+                    <input name="contact" type="text" class="form-control" placeholder="+63XXXXXXXXXX" aria-label="Phone Number" id="PN">
                 </div>  
             </div>
             
@@ -173,45 +176,62 @@
                 <div class="row mt-3 mb-2">
                     <div class="col">
                         <label for="Details" class="form-label"> DETAILS </label>
-                        <textarea class="form-control" placeholder="Message..." id="Details" rows="5"></textarea>
+                        <textarea name="message" class="form-control" placeholder="Message..." id="Details" rows="5"></textarea>
                     </div>
                 </div>
 
                 <div class="row my-3">
                     <div class="col-12">
-                        <button type="submit" class="submitBtn btn btn-primary">CONTACT NOW</button>
-                      </div>
+                        <button name="submit" type="submit" class="submitBtn btn btn-primary">CONTACT NOW</button>
+                    </div>
                 </div>
             </div>
 
-         </form>
+        </form>
+        <?php
+				if(ISSET($_SESSION['status'])){
+					if($_SESSION['status'] == "ok"){
+			?>
+						<div class="alert alert-info"><?php echo $_SESSION['result']?></div>
+			<?php
+					}else{
+			?>
+						<div class="alert alert-danger"><?php echo $_SESSION['result']?></div>
+			<?php
+					}
+ 
+					unset($_SESSION['result']);
+					unset($_SESSION['status']);
+				}
+			?>
+
     </div>
 
     <!-- THIS IS THE FOOTER  -->
     <div class="footer-container">
         <div class="banner">
             <div class="container container-1">
-               <div class="icons" id="icon1"><img src="images/location.png" alt=""></div>
-               <div class="details">
+                <div class="icons" id="icon1"><img src="images/location.png" alt=""></div>
+                <div class="details">
                     <div id="heading1">HOSPITAL ADDRESS</div>
                     <div id="info">E44, Design Street, Web Corner Melbourne -005</div>
-               </div>
+                </div>
             </div>
             <div class="container container-2">
                 <div class="icons" id="icon2"><img src="images/call.png" alt=""></div>
                 <div class="details">
                     <div id="heading1">EMERGENCY (27x7)</div>
                     <div id="info">Mobile: (+1) 800 433 633 <br> Toll Free: (+1) 800 123 456</div>
-               </div>
+                </div>
             </div>
             <div class="container container-3">
                 <div class="icons" id="icon3"><img src="images/mail.png" alt=""></div>
                 <div class="details">
                     <div id="heading1">EMAIL</div>
                     <div id="info">info@bhcis.com <br> support@bhcis.com</div>
-               </div>
+                </div>
             </div>
-       </div>
+        </div>
     </div>
 
     
@@ -258,7 +278,7 @@
             </div>
         </div>
     </footer>
- 
+
 
     <div id="footer2">
         &copy; 2015 Barangay Health Center Information System. All Rights Reserved.
@@ -267,5 +287,6 @@
     <script src="../js/nav-footer.js"></script>
     <script src="https://kit.fontawesome.com/52a9453a06.js" crossorigin="anonymous"></script>
     <script src="bootstrap.bundle.js"></script>
+
 </body>
 </html>

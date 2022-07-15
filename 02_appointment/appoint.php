@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,7 @@
     <title>BHCIS | Schedules</title>
 
     <!-- LOGO ICON -->
-    <link rel="short icon" type="x-icon" href="images/BHCIS.png">
+    <link href="images/BHCIS-03.png" rel="icon" type="image/x-icon type" >
 
     <!-- CSS -->
     <link rel="stylesheet" href="../css/navbar.css">
@@ -19,6 +20,12 @@
     
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- Flatpickr -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+
+    
 </head>
 <body>
     <!-- THIS IS TOPMOST NAVIGATION BAR -->
@@ -179,44 +186,80 @@
             <hr class="mx-auto">
             <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
           </div>
-  
-          <form action="forms/appointment.php" method="post" role="form" class="php-email-form my-3" data-aos="fade-up" data-aos-delay="100">
+          
+          <form action="appointment.php" method="post" role="form" class="php-email-form my-3" data-aos="fade-up" data-aos-delay="100">
             <div class="row">
               <div class="col-md-4 form-group">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                <input type="text" name="lname" class="form-control" id="lname" placeholder="Last Name" required>
               </div>
               <div class="col-md-4 form-group mt-3 mt-md-0">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                <input type="text" class="form-control" name="fname" id="fname" placeholder="First Name" required>
               </div>
               <div class="col-md-4 form-group mt-3 mt-md-0">
-                <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" required>
+                <input type="text" class="form-control" name="mname" id="mname" placeholder="Middle Name">
               </div>
             </div>
             <div class="row">
+                <div class="col-md-4 form-group mt-3">
+                    <input type="text" class="form-control" name="brgy-id" id="brgy-id" placeholder="Barangay ID">
+                </div>
               <div class="col-md-4 form-group mt-3">
-                <input type="datetime" name="date" class="form-control datepicker" id="date" placeholder="Barangay ID Number" required>
-              </div>
-              <div class="col-md-4 form-group mt-3">
-                <select name="department" id="department" class="form-select">
-                  <option value="">Select Department</option>
-                  <option value="Department 1">Department 1</option>
-                  <option value="Department 2">Department 2</option>
-                  <option value="Department 3">Department 3</option>
+                <select name="department" id="department" class="form-select" method="post">
+                    <option value="">Select Department</option>
+                    
+                    <!-- Select Departments from db -->
+                    <?php
+                        $conn = new mysqli('localhost', 'root', '', 'bhcis');
+
+                        if($conn->connect_error){
+                            die("Connection Failed:" .$conn->connect_error());
+                            echo "FAILED TO CONNECT";
+                        }
+                        $sql = "SELECT * FROM tbldepartment";
+                        $query = mysqli_query($conn,$sql);
+                        while($row = mysqli_fetch_array($query)){
+                            echo '<option id='.$row['department_name'].'>'.$row['department_name'].'</option>';
+                        }
+
+                        $conn->close();
+                    ?>
+
+
+
                 </select>
               </div>
               <div class="col-md-4 form-group mt-3">
                 <select name="doctor" id="doctor" class="form-select">
-                  <option value="">Select Doctor</option>
-                  <option value="Doctor 1">Doctor 1</option>
-                  <option value="Doctor 2">Doctor 2</option>
-                  <option value="Doctor 3">Doctor 3</option>
+                    <option value="">Select Doctor</option>
+                    
                 </select>
               </div>
             </div>
             <div class="row">
                 <div class="col-md-4 form-group mt-3">
-                  <input type="datetime" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date" required>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
                 </div>
+                <div class="col-md-4 form-group mt-3">
+                    <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" required>
+                </div>
+                <div class="col-md-4 form-group mt-3">
+                    <input type="datetime-local" name="date" class="form-control">
+                    <!-- <input type="datetime-local" name="date" class="form-control" placeholder="Select DateTime"> -->
+                </div>
+                <?php 
+                    if(isset($_SESSION['status']))
+                    {
+                        ?>
+                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                <strong>Hey!</strong> <?php echo $_SESSION['status']; ?>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        <?php
+                        unset($_SESSION['status']);
+                    }
+                ?>
+
+                
             </div>
             <div class="form-group mt-3">
               <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
@@ -313,6 +356,18 @@
     <script src="../js/nav-footer.js"></script>
     <script src="https://kit.fontawesome.com/52a9453a06.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-
+    <!-- <script src="jquery.main.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        function getDepartment(val){
+            $.ajax({
+                type: "POST",
+                url: "getDepartment.php",
+                data: 'doctor_id='+val,
+                success: funciton(data){
+                    $("#doctor").html.data;
+                }
+            });
+        }
+    </script> -->
 </body>
 </html>
